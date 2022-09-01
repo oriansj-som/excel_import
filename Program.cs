@@ -44,7 +44,12 @@ namespace Import_Excel
                 }
             }
 
-            }
+            import_excel e = new import_excel();
+            e.initialize(databasename, filename);
+            e.import(true, tablename, null != tablename);
+            e.cleanup();
+
+        }
 
         static public bool match(string a, string b)
         {
